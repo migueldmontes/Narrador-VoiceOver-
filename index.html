@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página Accesible</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 1rem;
+      text-decoration: none;
+    }
+
+    .sr-only {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENLACE INVISIBLE VISUALMENTE, PERO ACCESIBLE AL NARRADOR -->
+  <a href="#contenido-principal" class="sr-only">Saltar al contenido principal</a>
+
+  <nav role="navigation" aria-label="Menú principal">
+    <a href="#seccion-imagenes">Ir a las imágenes</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <main id="contenido-principal">
+    <section>
+      <h1>Bienvenido a Nuestra Página Accesible</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl vel tincidunt congue, velit orci porta nisl, et luctus sem neque sed urna.</p>
+    </section>
+
+    <section id="seccion-imagenes">
+      <h2>Galería de imágenes</h2>
+
+      <p>Antes de las imágenes: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+
+      <img src="https://via.placeholder.com/400x200" alt="Paisaje de montaña al amanecer con niebla">
+      <img src="https://via.placeholder.com/400x200" alt="Persona utilizando un ordenador portátil en un escritorio con taza de café">
+
+      <p>Después de las imágenes: Sed dignissim, diam id luctus cursus, neque risus cursus augue, vel volutpat nunc ante in nulla.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Si tienes preguntas, escríbenos a <a href="mailto:info@ejemplo.com">info@ejemplo.com</a>.</p>
+    </section>
+  </main>
+
+</body>
+</html>
